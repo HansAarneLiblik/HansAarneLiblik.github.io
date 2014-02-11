@@ -10,5 +10,8 @@
         <p>See on test site</p>
         <a href="lauri.html">Link lauri lehele</a>
 	<a href="jaan.html">Jaani leht</a>
+	<?php
+	echo 'see on php';
+	?>
     </body>
 </html>
