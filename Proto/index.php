@@ -7,7 +7,7 @@
 		<script src="../js/clicktoenlarge.js"></script>
 	</head>
 	<body>
-		<h2>Klõpsa pildil, et suurendada</h2>
+		<h2>Kliki pildil, et suurendada</h2>
 		<img id="1" onclick="changeSize(1)" src='index.png' />
 		<img id="2" onclick="changeSize(2)" src='index_loggedin.png' />
 		<img id="3" onclick="changeSize(3)" src='login_popup.png' />
