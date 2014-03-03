@@ -4,14 +4,14 @@ body {
     
 }
 
-header a{
+.header a{
     margin:30px;
-	float:top;
 	width:30%;
     font: 55px Arial;
     color: #05052d;
     text-decoration: none;
 }
+
 
 /*
 ul li a {
