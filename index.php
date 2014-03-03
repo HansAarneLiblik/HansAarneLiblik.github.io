@@ -19,6 +19,8 @@
 		<br />
 		<br />
 		<a href="Proto">Prototüübid</a>
+		<br />
+		<a href="ProtoTypeWeb">Proto website</a>
 		
 		
 		<?php
