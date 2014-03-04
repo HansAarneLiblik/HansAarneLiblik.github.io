@@ -1,25 +1,32 @@
 body {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 0 auto;
+	width: 800px;
     
 }
 
-.header a{
-    margin:30px;
-	width:30%;
+#header{
+	display: block;
     font: 55px Arial;
-    color: #05052d;
+    color: #000088;
     text-decoration: none;
 }
 
+.menuItem{
+}
 
-/*
-ul li a {
+#lingid{
+}
+ul li {
+	border-left: 0;
     color: black;
     text-decoration: none;
+	display: inline;
+}
+a {
+	color: black;
+	text-decoration: none;
 }
 
-.search {
-    float: right;
+#searchBox {
+	border-radius: 10px;
 }
-*/
