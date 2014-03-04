@@ -1,35 +1,62 @@
-<!DOCTYPE html>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Test site 101</title>
-        <link rel="stylesheet" type="text/css" href="css/desktop.css">
-    </head>
-    <body>
-    	<div id="header">
-    		<a href="index.php" id="homeButton"><h1>Test site 101</h1></a>
-    		<input id="search" placeholder="Search" /><img id="searchButton" src="img/search-button.png" />
-    	</div>
-    	<div id="body">
-        
-        <p>See on test site</p>
-        <a href="lauri.html">Link lauri lehele</a>
-		<a href="jaan.html">Jaani leht</a>
-		<br />
-		<br />
-		<a href="Proto">Prototüübid</a>
-		<br />
-		<a href="ProtoTypeWeb">Proto website</a>
-		
-		
+<html xmlns="http://www.w3.org/1999/xhtml"
+>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../css/StyleSheet.css"/>
+		<title>Koodi Ämber</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	</head>
+	<body>
+		<div class="header">
+			<a href="index.php">KoodiÄmber</a>
+		</div>
+		<div class="search" >
+			<form  action="/" method="post">
+				<p>
+					<input type="text" id="search"/>
+					<input type="button" title="otsi" value="Otsi"/>
+				</p>
+			</form>
+		</div>
+		<div class="menubar">
+			<ul>
+				<li>
+					<a href="index.php?p=amber">Minu ämber</a>
+				</li>
+				<li>
+					<a href="index.php?p=profiil">Minu profiil</a>
+				</li>
+				<li>
+					<a href="index.php?p=seaded">Seaded</a>
+				</li>
+			</ul>
+		</div>
+
 		<?php
-		echo 'see on php';
+		/*
+		if ($_GET['p']) {
+			switch ($_GET['p']) {
+				case "amber" :
+					include "minu_amber.html";
+					break;
+				case "profiil" :
+					include "minu_profiil.html";
+					break;
+				case "seaded" :
+					include "seaded.html";
+					break;
+
+				default :
+					include 'minu_amber.html';
+			}
+		} else {
+			include 'minu_amber.html';
+		}
+		 
+		 */
 		?>
-		</div>
-		<div id="login">
-			
-			
-		</div>
-    </body>
+	</body>
 </html>
