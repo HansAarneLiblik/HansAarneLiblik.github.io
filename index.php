@@ -10,42 +10,52 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	</head>
 	<body>
-		<table>
+		<table id="menu">
 			<tr>
-				<td>
-			<div id="header" class="menuItem">
-				<a href="index.php">KoodiÄmber</a>
-			</div>
-			</td>
-			<td>
-			<div id="lingid" class="menuItem">
-				<ul>
-					<li>
+				<td id="logo" rowspan="2">
+					<div id="header" class="menuItem">
+						<a href="index.php">KoodiÄmber</a>
+					</div>
+				</td>
+				<td id="lingid" rowspan="2">
+					<div class="menuItem">
 						<a href="?p=amber">Minu ämber</a>
-					</li>
-					<li>
+					</div>
+				</td>
+				<td id="lingid" rowspan="2">
+					<div class="menuItem">
 						<a href="?p=profiil">Minu profiil</a>
-					</li>
-					<li>
+					</div>
+				</td>
+				<td id="lingid" rowspan="2">
+					<div class="menuItem">
 						<a href="?p=seaded">Seaded</a>
-					</li>
-				</ul>
-			</div>
-			</td>
-			<td>
-			<div id="search" class="menuItem">
-				<form  action="/" method="post">
-					<p>
-						<input type="text" id="searchBox"/>
-						<input type="button" title="searchButton" value="Otsi"/>
-					</p>
-				</form>
-			</div>
-			</td>
-		</tr>
+					</div>
+				</td>
+				<td id="welcome">
+					<div class="menuItem">
+						  Tere &laquo eesnimi &raquo !
+					</div>
+				</td>
+				<td id="search">
+					<div class="menuItem">
+						<form  action="/" method="post">
+								<input type="text" id="searchBox" onFocus="if(this.value==' Otsing..')this.value='';" value=" Otsing..."/>
+								<input type="button" value="Otsi"/>
+						</form>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td id="logout">
+					<div class="menuItem">
+						<input type="button" value="Logi välja"/>
+					</div>
+				</td>
 		</table>
 		
-		
+		<br/><br/><br/>
 		<?php
 		
 		if (isset($_GET['p'])) {
