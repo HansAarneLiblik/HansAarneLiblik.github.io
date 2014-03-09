@@ -2,8 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml"
->
+<html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/StyleSheet.css"/>
 		<title>Koodi Ämber</title>
@@ -39,9 +38,9 @@
 				</td>
 				<td id="search">
 					<div class="menuItem">
-						<form  action="/" method="post">
+						<form  action="index.php" method="post">
 								<input type="text" id="searchBox" onFocus="if(this.value==' Otsing..')this.value='';" value=" Otsing..."/>
-								<input type="button" value="Otsi"/>
+								<input type="submit" value="Otsi"/>
 						</form>
 					</div>
 				</td>
@@ -56,27 +55,27 @@
 		</table>
 		
 		<br/><br/><br/>
-		<?php
 		
-		if (isset($_GET['p'])) {
-			switch ($_GET['p']) {
-				case "amber" :
-					include "minu_amber.html";
-					break;
-				case "profiil" :
-					include "minu_profiil.html";
-					break;
-				case "seaded" :
-					include "seaded.html";
-					break;
-				default :
-					include 'minu_amber.html';
-			}
-		} else {
-			include 'minu_amber.html';
-		}
-		 
-		
-		?>
+		<div id="content">
+			<?php
+			if (isset($_GET['p'])) {
+				switch ($_GET['p']) {
+					case "amber" :
+						include "minu_amber.html";
+						break;
+					case "profiil" :
+						include "minu_profiil.html";
+						break;
+					case "seaded" :
+						include "seaded.html";
+						break;
+					default :
+						include 'kodu.html';
+				}
+			} else {
+				include 'kodu.html';
+			}	
+			?>
+		</div>
 	</body>
 </html>

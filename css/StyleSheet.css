@@ -8,7 +8,7 @@ body {
     font: 40px Arial;
     color: #000088;
     text-decoration: none;
-	width: 230px;
+	width: 250px;
 }
 
 #menu{
@@ -16,11 +16,10 @@ body {
 }
 
 #menu tr td{
-	width: 170px;
-	height: 30px;
+	width: 160px;
+	height: 34px;
 	text-align: center;
-	vertical-align: center;
-	padding: 250;
+	vertical-align: middle;
 	background-color: #0099FF;
 	
 }
@@ -30,7 +29,7 @@ body {
 }
 
 #lingid{
-	width: 110px !important;
+	width: 12% !important;
 	background-color: blue !important;
 	color: white !important;
 	border-left: 2px solid black;
@@ -47,9 +46,28 @@ a{
 	color: black;
 	text-decoration: none;
 }
+
 #search{
+	width: 230px !important;
+}
+
+#logout{
+	padding: 0px 12px;
+	text-align: right !important;
 }
 
 #searchBox {
 	border-radius: 10px;
+}
+
+#content {
+	margin: 0px 30px;
+	height: 700px;
+}
+#codeField{
+	float: left;
+}
+#codeSettings{
+	margin: -20px 0px 0px 50px;
+	float: left;
 }

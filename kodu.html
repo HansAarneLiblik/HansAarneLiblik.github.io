@@ -1,0 +1,25 @@
+<div id="codeField">
+	<form action="index.php" method="post" id="code">
+		<input type="text" id="codeName" value="Nimetu"/><br/>
+		<textarea name="koodiLahter" rows="35" cols="80"></textarea><br/>
+		<input type="submit" value="Salvesta"/>
+	</form>
+</div>
+<div id="codeSettings">
+	<h3>Sätted</h3>
+	Koodi säilimine: 
+	<select id="expiration">
+		<option value="1d">1 päev</option>
+		<option value="2d">2 päeva</option>
+		<option value="5d">5 päeva</option>
+		<option value="1w">1 nädal</option>
+		<option value="2w">2 nädalat</option>
+		<option value="1m">1 kuu</option>
+		<option value="perm">Igavesti</option>
+	</select><br/>
+	Privatsus: 
+	<select id="privacy">
+		<option value="A">Avalik</option>
+		<option value="P">Privaatne</option>
+	</select><br/>
+</div>
