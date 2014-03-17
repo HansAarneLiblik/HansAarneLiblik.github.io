@@ -50,10 +50,10 @@
                 <td id="logout">
                     <div class="menuItem">
                                                     <!--<form action="register.html" method="GET">
-                                                        <input type="submit" value="Logi välja" />-->
+                                                        <input type="submit" value="Logi välja" /></form>-->
                         <a class="lingid2" href="login.html">Logi sisse</a> või 
                         <a class="lingid2" href="register.html">Registreeru</a>
-                        </form>
+                        
                     </div>
                 </td>
             </tr>
