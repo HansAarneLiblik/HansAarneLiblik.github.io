@@ -11,6 +11,13 @@ body {
 	width: 250px;
 }
 
+#logo{
+	border-bottom-left-radius: 10px;
+}
+#logout{
+	border-bottom-right-radius: 10px;
+}
+
 #menu{
 	border-collapse: collapse;
 }
@@ -20,7 +27,7 @@ body {
 	height: 34px;
 	text-align: center;
 	vertical-align: middle;
-	background-color: #0099FF;
+	background-color: #1E90FF;
 	
 }
 
@@ -36,6 +43,9 @@ body {
 	border-right: 2px solid black;
 }
 
+.lingid2 {
+    color: white;
+}
 
 .lingid a {
 	color: white;
@@ -70,4 +80,10 @@ a{
 #codeSettings{
 	margin: -20px 0px 0px 50px;
 	float: left;
+}
+#register, #login {
+    width: 30%;    
+}
+.vorm {
+    float: right;
 }
