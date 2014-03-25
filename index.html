@@ -61,28 +61,6 @@
 
 
         <div id="content">
-            <?php
-                   if (isset($_GET['reg'])) {
-                     echo "Registreerimine õnnestus! Proovi sisse logida!";
-                }
-                   if (isset($_GET['p'])) {
-                       switch ($_GET['p']) {
-                           case "amber" :
-                               include "minu_amber.html";
-                               break;
-                           case "profiil" :
-                               include "minu_profiil.html";
-                               break;
-                           case "seaded" :
-                               include "seaded.html";
-                               break;
-                           default :
-                               include 'kodu.html';
-                       }
-                   } else {
-                       include 'kodu.html';
-                   }	
-            ?>
         </div>
     </body>
 </html>

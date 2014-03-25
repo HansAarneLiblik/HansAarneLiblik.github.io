@@ -7,6 +7,7 @@
     $hashed_pw = (string)hash_final($ctx);
     
     $dbconn = pg_connect("host=vrl.liblik.ee port=5432 dbname=veebirak user=postgres password=lollakas");
+    //$dbconn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=vrl4ever");
     $query1 = "SELECT count(id) FROM users WHERE username='$username' AND password='$hashed_pw'";
     $query2 = "SELECT id FROM users WHERE username='$username' AND password='$hashed_pw'";
     $result1 = pg_query($query1);
