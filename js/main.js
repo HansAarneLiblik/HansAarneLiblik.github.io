@@ -4,9 +4,9 @@ $(document).ready(function () {
     } else {
         $("#content").load(document.location.hash.substr(1)+".html");
     }
-//    $("#header").click(function () {
-//        $("#content").load("kodu.html");
-//    });
+    $("#header").click(function () {
+        $("#content").load("kodu.html");
+    });
     $("#loginLink").click(function () {
         $("#content").load("login.html");
     });
