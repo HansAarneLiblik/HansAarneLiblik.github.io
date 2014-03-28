@@ -70,20 +70,51 @@ a{
 	border-radius: 10px;
 }
 
-#content {
-	margin: 0px 30px;
-	height: 700px;
+#content{
+    clear: both;
+    overflow: hidden;
+    margin:10px auto 0;
 }
-#codeField{
-	float: left;
+
+.left-content {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1E90FF;
+    min-height: 10px;
+    width: 700px;
+    max-width: 700px;
 }
-#codeSettings{
-	margin: -20px 0px 0px 50px;
-	float: left;
+.right-content {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1E90FF;
+    width: 250px;
+    max-width: 250px;
+    height: 300px;
+}
+.right-content-upper{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1E90FF;
+    width: 250px;
+    max-width: 250px;
+    margin-bottom: 10px;
 }
 #register, #login {
     width: 30%;    
 }
 .vorm {
     float: right;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}    
+textarea {
+    resize: vertical;
+}
+h3 {
+    margin-top: 0;
 }
