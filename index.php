@@ -15,8 +15,8 @@
             if (isset($_SESSION['user'])) {
                 $welcome = "Tere, ".$_SESSION['user']."!";
                 $menu = "<ul>
-                            <li><a href=\"#minu_amber\" title=\"Minu Ämber\">Minu Ämber</a></li>
-                            <li><a href=\"#profiil\" title=\"Profiil\">Profiil</a></li>
+                            <li><a id=\"minu_amber\" href=\"#minu_amber\" title=\"Minu Ämber\">Minu Ämber</a></li>
+                            <li><a id=\"profiil\" href=\"#profiil\" title=\"Profiil\">Profiil</a></li>
                             <li id=\"seaded\"><a href=\"#seaded\" title=\"Seaded\">Seaded</a></li>
                         </ul>";	
             } else {
