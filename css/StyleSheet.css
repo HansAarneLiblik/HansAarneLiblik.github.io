@@ -3,12 +3,16 @@ body {
 	width: 1000px;
 }
 
-#header{
-	display: block;
+#header > a {
+    display: block;
     font: 40px Arial;
-    color: #000088;
+    color: #FFF;
     text-decoration: none;
 	width: 250px;
+}
+
+#header > a:hover {
+    color: #EAEAEA;
 }
 
 #logo{
@@ -20,10 +24,10 @@ body {
 
 #menu{
 	border-collapse: collapse;
+    width: 1000px;
 }
 
 #menu tr td{
-	width: 160px;
 	height: 34px;
 	text-align: center;
 	vertical-align: middle;
@@ -32,7 +36,45 @@ body {
 }
 
 .menuItem{
+    color: white;
+}
 
+.menuItem > ul {
+    display: block;
+    float: center;
+    height: 40px;
+    list-style-type: none;
+    padding-right: 10px;
+}
+
+.menuItem > ul > li {
+    border-left: solid 1px #FFF;
+    display: block;
+    float: left;
+    height: 40px;
+}
+
+#seaded {
+    border-right: solid 1px #FFF;
+}
+
+.menuItem > ul > li > a {
+    background-color: #1E90FF;
+    color: #FFF;
+    display: block;
+    float: left;
+    font-size: 20px;
+    height: 30px;
+    padding: 10px 15px 7px;
+    text-decoration: none;
+}
+
+.menuItem > ul > li > a:hover {
+    background-color: #369;
+    border-bottom: solid 5px #469;
+    border-top: solid 4px #469;
+    border-radius: 0 0 5px 5px;
+    color: #FFF;
 }
 
 .lingid{
@@ -55,6 +97,10 @@ body {
 a{
 	color: black;
 	text-decoration: none;
+}
+
+#welcome {
+    width: 150px;
 }
 
 #search{
@@ -101,7 +147,7 @@ a{
     margin-bottom: 10px;
 }
 #register, #login {
-    width: 30%;    
+       width: 30%; 
 }
 .vorm {
     float: right;
