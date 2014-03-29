@@ -16,12 +16,12 @@
             if (isset($_SESSION['user'])) {
                 $welcome = "Tere, ".$_SESSION['user']."!";
                 $menu = "<ul>
-                            <li><a id=\"minu_amber\" href=\"#minu_amber\" title=\"Minu Ämber\">Minu Ämber</a></li>
-                            <li><a id=\"profiil\" href=\"#profiil\" title=\"Profiil\">Profiil</a></li>
+                            <li id=\"minu_amber\"><a href=\"#minu_amber\" title=\"Minu Ämber\">Minu Ämber</a></li>
+                            <li id=\"profiil\"><a href=\"#profiil\" title=\"Profiil\">Profiil</a></li>
                             <li id=\"seaded\"><a href=\"#seaded\" title=\"Seaded\">Seaded</a></li>
                         </ul>";	
             } else {
-                $welcome = "Pole sisse logitud.";
+                $welcome = "";
                 $menu = "";                
             }
             
@@ -69,14 +69,14 @@
                         if (!isset($_SESSION['user'])) {
                             echo "
                                 <div class=\"menuItem\">
-                                    <a id=\"loginLink\" class=\"lingid2\" href=\"#login\">Logi sisse</a> või
-                                    <a id=\"registerLink\" class=\"lingid2\" href=\"#register\">Registreeru</a>
+                                    <a id=\"loginLink\" class=\"lingid\" href=\"#login\">Logi sisse</a> või
+                                    <a id=\"registerLink\" class=\"lingid\" href=\"#register\">Registreeru</a>
                                 </div>
                             ";
                         } else {
                             echo "
                                 <div class=\"menuItem\">
-                                    <a id=\"logoutLink\" class=\"lingid2\" href=\"logout.php\">Logi välja</a>
+                                    <a id=\"logoutLink\" class=\"lingid\" href=\"logout.php\">Logi välja</a>
                                 </div>
                             ";
                         }
