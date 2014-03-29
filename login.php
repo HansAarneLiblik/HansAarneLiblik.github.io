@@ -8,18 +8,26 @@
     
     $dbconn = pg_connect("host=vrl.liblik.ee port=5432 dbname=veebirak user=postgres password=lollakas");
     //$dbconn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=vrl4ever");
-    $query1 = "SELECT count(id) FROM users WHERE username='$username' AND password='$hashed_pw'";
-    $query2 = "SELECT id FROM users WHERE username='$username' AND password='$hashed_pw'";
+    $query1 = "SELECT count(id) FROM users2 WHERE username='$username' AND password='$hashed_pw'";
+    $query2 = "SELECT id FROM users2 WHERE username='$username' AND password='$hashed_pw'";
     $result1 = pg_query($query1);
     
     if (pg_fetch_row($result1)[0]==0){
         $arg = "Kasutajanimi või parool vale!";
+		$_SESSION['error'] =  $arg;
+		pg_close($dbconn);
+		header('Location: index.php#login');
     } else {
         $result2 = pg_query($query2);
         $userid = pg_fetch_row($result2)[0];
-        $arg = "Tere $username! <br/> ID = $userid";
+        
+		session_start();
+		
+		$_SESSION['user'] = $username;
+		$_SESSION['id'] = $userid;
     }
     pg_close($dbconn);
+	header('Location: index.php');
 ?>
 
 <!DOCTYPE html>
@@ -29,8 +37,13 @@
         <title></title>
     </head>
     <body>
-        <?php            
-            echo $arg;
+        <?php
+            
+			if (isset($_SESSION['user'])) {
+				echo "Tere, ".$_SESSION['user']."!";
+			}
         ?>
+        <br />
+        <a href="index.php">Kui sa näed seda, siis kliki palun siia, et minna tagasi esilehele.</a>
     </body>
 </html>

@@ -16,7 +16,7 @@
     $dbconn = pg_connect("host=vrl.liblik.ee port=5432 dbname=veebirak user=postgres password=lollakas");
     //$dbconn = pg_connect("host=localhost port=5432 dbname=postgres user=postgres password=vrl4ever");
     //$query = "insert into users (username, password, firstname, lastname, email, date_of_birth) VALUES ('$username', '$hashed_pw', '$firstname', '$lastname', '$email', '$bday')";
-    $query = "insert into users (username, password, email) VALUES ('$username', '$hashed_pw', '$email')";
+    $query = "insert into users2 (username, password, email) VALUES ('$username', '$hashed_pw', '$email')";
 
     $result = pg_query($query) or die('Query failed: ' . pg_last_error());
     pg_free_result($result);
