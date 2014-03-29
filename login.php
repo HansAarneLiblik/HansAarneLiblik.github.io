@@ -14,12 +14,20 @@
     
     if (pg_fetch_row($result1)[0]==0){
         $arg = "Kasutajanimi või parool vale!";
+		$_SESSION['error'] =  $arg;
+		pg_close($dbconn);
+		header('Location: index.php#login');
     } else {
         $result2 = pg_query($query2);
         $userid = pg_fetch_row($result2)[0];
-        $arg = "Tere $username! <br/> ID = $userid";
+        
+		session_start();
+		
+		$_SESSION['user'] = $username;
+		$_SESSION['id'] = $userid;
     }
     pg_close($dbconn);
+	header('Location: index.php');
 ?>
 
 <!DOCTYPE html>
@@ -29,8 +37,13 @@
         <title></title>
     </head>
     <body>
-        <?php            
-            echo $arg;
+        <?php
+            
+			if (isset($_SESSION['user'])) {
+				echo "Tere, ".$_SESSION['user']."!";
+			}
         ?>
+        <br />
+        <a href="index.php">Kui sa näed seda, siis kliki palun siia, et minna tagasi esilehele.</a>
     </body>
 </html>
