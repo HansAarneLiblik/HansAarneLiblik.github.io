@@ -1,4 +1,7 @@
 <?php
+	if(!isset($_GET['id']) or $_GET['id']==""){
+		header('Location: index.php');
+	}
     $codeId = $_GET['id'];
     $e_id = pg_escape_string($codeId);
     $dbconn = pg_connect("host=vrl.liblik.ee port=5432 dbname=veebirak user=postgres password=lollakas");
