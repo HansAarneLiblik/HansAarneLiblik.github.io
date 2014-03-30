@@ -1,6 +1,8 @@
 <?php
     $name = $_POST['codeName'];
     $code = $_POST['koodiLahter'];
+    $expiration = $_POST['expiration'];
+    $privacy = $_POST['privacy'];
     $e_code = pg_escape_string($code);
     session_start();
     if (isset($_SESSION['id'])) {
@@ -9,9 +11,14 @@
         $uid = 1;
     
     }
+    if ($privacy=="P") {
+        $privacy = "TRUE";
+    } else {
+        $privacy = "FALSE";
+    }
     
     $dbconn = pg_connect("host=vrl.liblik.ee port=5432 dbname=veebirak user=postgres password=lollakas");
-    $query = "insert into codes (name, author_id, content) VALUES ('$name', '$uid', '{$e_code}')";
+    $query = "insert into codes (name, author_id, content, privacy) VALUES ('$name', '$uid', '{$e_code}', '$privacy')";
     $result = pg_query($query);        
     pg_free_result($result);
     
