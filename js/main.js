@@ -6,6 +6,9 @@ $(document).ready(function () {
 		if (document.location.hash == "#login") {
 			$(".left-content").load(document.location.hash.substr(1) + ".php");
 		}
+		if (document.location.hash == "#register") {
+			$(".left-content").load(document.location.hash.substr(1) + ".php");
+		}
     }
     $("#header").click(function () {
         $(".left-content").load("kodu.html");
@@ -14,7 +17,7 @@ $(document).ready(function () {
         $(".left-content").load("login.php");
     });
     $("#registerLink").click(function () {
-        $(".left-content").load("register.html");
+        $(".left-content").load("register.php");
     });
     $("#minu_amber").click(function () {
         $(".left-content").load("minu_amber.html");

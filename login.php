@@ -39,10 +39,17 @@
 			<form id="login" action="login.php" method="post" accept-charset="UTF-8">
 				<fieldset>
 					<legend>Logi sisse</legend>
-					<p><label for="username">Kasutajanimi</label><input class="vorm" type="text" name="username" id="username" maxlength="20" required /></p>
-					<p><label for="password">Parool</label><input class="vorm" type="password" name="password" id="password" maxlength="50" required /></p>
-					<p><input type="submit" name="Submit" value="Logi sisse" />
-					</p>
+					<table>
+						<tr>
+							<td><label for="username">Kasutajanimi</label></td>
+							<td><input class="vorm" type="text" name="username" id="username" maxlength="20" required /></td>
+						</tr>
+						<tr>
+							<td><label for="password">Parool</label></td>
+							<td><input class="vorm" type="password" name="password" id="password" maxlength="50" required /></td>
+						</tr>
+					</table>
+					<input type="submit" name="Submit" value="Logi sisse" />
 				</fieldset>
 			</form>
 		</td>
