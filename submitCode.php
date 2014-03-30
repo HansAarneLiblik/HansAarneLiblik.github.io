@@ -7,12 +7,18 @@
         $uid = $_SESSION['id'];
     } else {
         $uid = 1;
-       
+    
     }
-
+    
     $dbconn = pg_connect("host=vrl.liblik.ee port=5432 dbname=veebirak user=postgres password=lollakas");
     $query = "insert into codes (name, author_id, content) VALUES ('$name', '$uid', '{$e_code}')";
-    $result = pg_query($query) or die('Query failed: ' . pg_last_error());
+    $result = pg_query($query);        
+    pg_free_result($result);
+    
+    $query = "select id from codes where name='$name' and author_id='$uid' and content='{$e_code}' limit 1";
+    $result = pg_query($query);
+    $row = pg_fetch_row($result);
+    $createdId = $row[0];
     pg_free_result($result);
     pg_close($dbconn);
     
@@ -24,6 +30,11 @@
         <title></title>
     </head>
     <body>
+        <?php
+            header("Location: /vaade.php?id=$createdId");
+            exit;
+        ?>
+
         siit peaks vaate lehele suunama millalgi tulevikus
     </body>
 </html>
