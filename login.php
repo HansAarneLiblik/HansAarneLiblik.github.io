@@ -33,52 +33,28 @@
 	}
 	
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Login</title>
-    </head>
-    <body>
-<div class="left-content left">
 <table>
-<tr>
-<td>
-<form id="login" action="login.php" method="post" accept-charset="UTF-8">
-    <fieldset>
-        <legend>Logi sisse</legend>
-        <p><label for="username">Kasutajanimi</label><input class="vorm" type="text" name="username" id="username" maxlength="20" required /></p>
-        <p><label for="password">Parool</label><input class="vorm" type="password" name="password" id="password" maxlength="50" required /></p>
-        <p><input type="submit" name="Submit" value="Logi sisse" />
-        </p>
-    </fieldset>
-</form>
-</td>
-<td>
-<?php
-	if (isset($_SESSION['error'])) {
-		if ($_SESSION['error'] != "") {
-			echo $_SESSION['error'];
-			$_SESSION['error'] = "";
-		}
-	}
-?>
-</td>
-</tr>
+	<tr>
+		<td>
+			<form id="login" action="login.php" method="post" accept-charset="UTF-8">
+				<fieldset>
+					<legend>Logi sisse</legend>
+					<p><label for="username">Kasutajanimi</label><input class="vorm" type="text" name="username" id="username" maxlength="20" required /></p>
+					<p><label for="password">Parool</label><input class="vorm" type="password" name="password" id="password" maxlength="50" required /></p>
+					<p><input type="submit" name="Submit" value="Logi sisse" />
+					</p>
+				</fieldset>
+			</form>
+		</td>
+		<td>
+			<?php
+				if (isset($_SESSION['error'])) {
+					if ($_SESSION['error'] != "") {
+						echo $_SESSION['error'];
+						$_SESSION['error'] = "";
+					}
+				}
+			?>
+		</td>
+	</tr>
 </table>
-</div>
-<div class="right-content right">
-    <h3>Uued koodid</h3>
-    siin<br>
-    on<br>
-    uued<br>
-    koodid<br>
-    mis<br>
-    on<br>
-    tekitatud<br>
-    teiste<br>
-    poolt
-</div>
-    </body>
-</html>
