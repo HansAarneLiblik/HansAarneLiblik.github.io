@@ -153,6 +153,11 @@ textarea {
     resize: vertical;
 }
 
+#codeBox {
+    width: 650px;
+    height: 700px;
+}
+
 h3 {
     margin-top: 0;
 }
