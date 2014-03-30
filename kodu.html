@@ -1,13 +1,11 @@
 <div class="left-content left">
-    <form action="index.php" method="post" id="code">
-        <div>
-            <form id="codeBox" action="submitCode.php" method="post" accept-charset="UTF-8">
-                <input type="text" id="codeName" value="Nimetu" />
-                <p><textarea name="koodiLahter" rows="35" cols="84"></textarea></p>
-                <input type="submit" value="Salvesta" />
-            </form>
-        </div>
-    </form>
+    <div id="koodiKast">
+        <form id="submitCode" action="submitCode.php" method="post" accept-charset="UTF-8">
+            <input type="text" name="codeName" id="_codeName" value="Nimetu" />
+            <p><textarea name="koodiLahter"></textarea></p>
+            <input type="submit" name="Submit" value="Salvesta" />
+        </form>
+    </div>
 </div>
 <div class="right-content-upper right">
     <h3>Sätted</h3>
