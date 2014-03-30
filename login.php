@@ -24,9 +24,11 @@
 		
 		$_SESSION['user'] = $username;
 		$_SESSION['id'] = $userid;
+		pg_close($dbconn);
+		header('Location: index.php');
     }
-    pg_close($dbconn);
-	header('Location: index.php');
+    
+	
 ?>
 
 <!DOCTYPE html>

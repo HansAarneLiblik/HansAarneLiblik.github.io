@@ -89,12 +89,6 @@
 
 
         <div id="content">
-            <?php
-                if (isset($_SESSION['notice'])) {
-                    echo $_SESSION['notice'];
-                    unset($_SESSION['notice']);
-                }
-            ?>
 
         </div>
     </body>
