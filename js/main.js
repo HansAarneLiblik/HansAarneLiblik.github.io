@@ -3,12 +3,15 @@ $(document).ready(function () {
         $("#content").load("kodu.html");
     } else {
         $("#content").load(document.location.hash.substr(1) + ".html");
+		if (document.location.hash == "#login") {
+			$("#content").load(document.location.hash.substr(1) + ".php");
+		}
     }
     $("#header").click(function () {
         $("#content").load("kodu.html");
     });
     $("#loginLink").click(function () {
-        $("#content").load("login.html");
+        $("#content").load("login.php");
     });
     $("#registerLink").click(function () {
         $("#content").load("register.html");
