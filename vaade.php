@@ -11,21 +11,22 @@
     pg_close($dbconn);
 ?>
 <!DOCTYPE html>
-
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="css/StyleSheet.css" />
         <meta charset="utf-8" />
-        <title></title>
+        <title><?php
+            echo "$codeName";
+            ?></title>
     </head>
     <body>
         asute algelisel vaate lehel
         <br>
         <?php
-             echo "<h1> $codeName </h1>";
-             echo "<p><textarea id=\"codeBox\" name=\"koodiLahter\">$content</textarea></p>";
-
+            echo "<h1> $codeName </h1>";
+            echo "<p><textarea readonly id=\"codeBox\" name=\"koodiLahter\">$content</textarea></p>";
+            
         ?>
-       
+
     </body>
 </html>
