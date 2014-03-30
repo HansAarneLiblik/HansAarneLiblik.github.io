@@ -1,6 +1,6 @@
 $(document).ready(function () {
     if (document.location.hash == "" || document.location.hash == "#") {
-        $(".left-content").load("kodu.html");
+        $(".left-content").load("kodu.php");
     } else {
         $(".left-content").load(document.location.hash.substr(1) + ".html");
 		if (document.location.hash == "#login") {
