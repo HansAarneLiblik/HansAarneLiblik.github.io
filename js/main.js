@@ -12,6 +12,10 @@ $(document).ready(function () {
 		if (document.location.hash == "#minu_amber") {
 			$(".left-content").load(document.location.hash.substr(1) + ".php");
 		}
+		if (document.location.hash.substr(15, 29) == "#vaade.php?id=") {
+			var x = document.location.hash.substr(29, -1)
+			$(".left-content").load(document.location.hash.substr(1));
+		}
     }
     $("#header").click(function () {
         $(".left-content").load("kodu.html");
@@ -31,6 +35,7 @@ $(document).ready(function () {
     $("#minu_seaded").click(function () {
         $(".left-content").load("minu_seaded.html");
     });
+	
     $("#searchBox").focusin(function () {
         if (this.value == 'Otsing...') {
             this.value = '';
@@ -48,9 +53,4 @@ $(document).ready(function () {
 	setInterval(function(){
 		$(".right-content").load("uued_koodid.php");
 	}, 5000);
-	
-	
-
-
-
 });

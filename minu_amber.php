@@ -18,7 +18,7 @@
 				$result = pg_query($query);
 				$i = 1;
 				while ($val = pg_fetch_row($result)) {
-					echo "<tr><td>$i. </td><td>$val[0]</td><td><a href=\"/vaade.php?id=$val[0]\">$val[1]</a></td>
+					echo "<tr><td>$i. </td><td>$val[0]</td><td><a href=\"#vaade.php?id=$val[0]\">$val[1]</a></td>
 					<td>$val[4]</td></tr>";
 					$i = $i + 1;
 				}

@@ -2,8 +2,7 @@
 	if(!isset($_GET['id']) or $_GET['id']==""){
 		header('Location: index.php');
 	}
-	$code = split('[.]', $_GET['id']);
-    $codeId = $code[0];
+    $codeId = $_GET['id'];
     $e_id = pg_escape_string($codeId);
     $dbconn = pg_connect("host=vrl.liblik.ee port=5432 dbname=veebirak user=postgres password=lollakas");
     $query1 = "select privacy from codes where id ='{$e_id}'";
@@ -31,7 +30,6 @@
                 $codeName = $row1[0];
                 $content = $row1[1];
                 $content2 = "<h1> $codeName </h1><p><textarea readonly id=\"codeBox\" name=\"koodiLahter\">$content</textarea></p>";
-				header('Location: #vaade.php');
             }
     
         } else {
@@ -42,9 +40,21 @@
     pg_close($dbconn);
 ?>
 <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/StyleSheet.css" />
+        <meta charset="utf-8" />
+        <title><?php
+            echo "$codeName";
+            ?></title>
+    </head>
+    <body>
         asute algelisel vaate lehel<br>
         <br>
         <?php
             echo $content2;
             
         ?>
+
+    </body>
+</html>
