@@ -15,7 +15,7 @@
             <tr>
                 <td>Koodi säilimine:</td>
                 <td>
-                    <select id="expiration">
+                    <select id="expiration" name="expiration">
                         <option value="1d">1 päev</option>
                         <option value="2d">2 päeva</option>
                         <option value="5d">5 päeva</option>
@@ -29,7 +29,7 @@
             <tr>
                 <td>Privatsus:</td>
                 <td>
-                    <select id="privacy">
+                    <select id="privacy" name="privacy">
                         <option value="A">Avalik      </option>                        
                         <?php
                             echo $option;
