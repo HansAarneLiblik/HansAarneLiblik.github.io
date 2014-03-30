@@ -45,7 +45,6 @@ body {
 .menuItem > ul > li {
     border-left: solid 1px #FFF;
     display: block;
-    float: left;
     height: 40px;
 }
 
@@ -57,7 +56,6 @@ body {
     background-color: #1E90FF;
     color: black;
     display: block;
-    float: left;
     font-size: 20px;
     height: 30px;
     padding: 10px 15px 7px;
@@ -97,7 +95,9 @@ a {
 }
 
 #searchBox {
+	padding: 0px 5px 0px 5px;
     border-radius: 10px;
+	height: 20px;
 }
 
 #content {
@@ -124,21 +124,8 @@ a {
     height: 300px;
 }
 
-.right-content-upper {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #1E90FF;
-    width: 250px;
-    max-width: 250px;
-    margin-bottom: 10px;
-}
-
 #register, #login {
     width: 30%;
-}
-
-.vorm {
-    float: right;
 }
 
 .left {
