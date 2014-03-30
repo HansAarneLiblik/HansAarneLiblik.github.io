@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	if (isset($_POST['username'])) {
 		$username = $_POST['username'];
 		$password = $_POST['password'];
@@ -20,8 +21,6 @@
 		} else {
 			$result2 = pg_query($query2);
 			$userid = pg_fetch_row($result2)[0];
-			
-			session_start();
 			
 			$_SESSION['user'] = $username;
 			$_SESSION['id'] = $userid;
