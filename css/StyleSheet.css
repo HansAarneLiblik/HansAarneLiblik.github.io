@@ -156,3 +156,7 @@ textarea {
 h3 {
     margin-top: 0;
 }
+
+.pasteTable th {
+	border-bottom: 1px solid;
+}

@@ -54,7 +54,7 @@
                     <div class="menuItem">
                         <form action="index.php" method="post">
                             <div>
-                                <input type="text" id="searchBox" value="Otsing..." />
+                                <input type="text" id="searchBox" placeHolder="Otsing..." />
                                 <input type="submit" value="Otsi" />
                             </div>
                         </form>
