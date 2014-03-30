@@ -92,15 +92,44 @@
             </div>
             <div class="right-content right">
                 <h3>Uued koodid</h3>
-                siin<br/>
-                on<br/>
-                uued<br/>
-                koodid<br/>
-                mis<br/>
-                on<br/>
-                tekitatud<br/>
-                teiste<br/>
-                poolt
+				<table>
+					<?php
+						$dbconn = pg_connect("host=vrl.liblik.ee port=5432 dbname=veebirak user=postgres password=lollakas");
+						$query = "select name from codes ORDER BY time_stamp DESC LIMIT 3;";
+						$result = pg_query($query);
+						pg_close($dbconn);
+					?>
+					<tr>
+						<td><?php echo $result[0];?></td>
+					</tr>
+					<tr>
+						<td><?php echo $result[1];?></td>
+					</tr>
+					<tr>
+						<td><?php echo $result[2];?></td>
+					</tr>
+					<tr>
+						<td><?php echo $result[1];?></td>
+					</tr>
+					<tr>
+						<td><?php echo $result[1];?></td>
+					</tr>
+					<tr>
+						<td><?php echo $result[1];?></td>
+					</tr>
+					<tr>
+						<td><?php echo $result[1];?></td>
+					</tr>
+					<tr>
+						<td><?php echo $result[1];?></td>
+					</tr>
+					<tr>
+						<td><?php echo $result[1];?></td>
+					</tr>
+					<tr>
+						<td><?php echo $result[1];?></td>
+					</tr>
+				</table>
             </div>
         </div>
     </body>
