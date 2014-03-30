@@ -1,5 +1,7 @@
 <?php
 	session_start();
+	
+	
 	if (isset($_POST['username'])) {
 		$username = $_POST['username'];
 		$password = $_POST['password'];
@@ -18,14 +20,15 @@
 			$_SESSION['error'] =  $arg;
 			pg_close($dbconn);
 			header('Location: index.php#login');
+			exit();
 		} else {
 			$result2 = pg_query($query2);
 			$userid = pg_fetch_row($result2)[0];
-			
 			$_SESSION['user'] = $username;
 			$_SESSION['id'] = $userid;
 			pg_close($dbconn);
 			header('Location: index.php');
+			exit();
 		}
 	}
 	
@@ -55,7 +58,10 @@
 <td>
 <?php
 	if (isset($_SESSION['error'])) {
-		echo $_SESSION['error'];
+		if ($_SESSION['error'] != "") {
+			echo $_SESSION['error'];
+			$_SESSION['error'] = "";
+		}
 	}
 ?>
 </td>
