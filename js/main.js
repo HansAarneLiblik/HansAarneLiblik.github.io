@@ -45,6 +45,10 @@ $(document).ready(function () {
         }
     });
 	
+	setInterval(function(){
+		$(".right-content").load("uued_koodid.php");
+	}, 5000);
+	
 	
 
 
