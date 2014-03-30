@@ -2,7 +2,7 @@ $(document).ready(function () {
     if (document.location.hash == "" || document.location.hash == "#") {
         $("#content").load("kodu.html");
     } else {
-        $("#content").load(document.location.hash.substr(1)+".html");
+        $("#content").load(document.location.hash.substr(1) + ".html");
     }
     $("#header").click(function () {
         $("#content").load("kodu.html");
@@ -22,4 +22,20 @@ $(document).ready(function () {
     $("#seaded").click(function () {
         $("#content").load("seaded.html");
     });
+    $("#searchBox").focusin(function () {
+        if (this.value == 'Otsing...') {
+            this.value = '';
+            this.style.color = '#000';
+        }
+    });
+
+    $("#searchBox").focusout(function () {
+        if (this.value == '') {
+            this.value = 'Otsing...';
+            this.style.color = '#BBB';
+        }
+    });
+
+
+
 });
