@@ -87,9 +87,21 @@
             </tr>
         </table>
 
-
         <div id="content">
-
+            <div class="left-content left">
+            </div>
+            <div class="right-content right">
+                <h3>Uued koodid</h3>
+                siin<br>
+                on<br>
+                uued<br>
+                koodid<br>
+                mis<br>
+                on<br>
+                tekitatud<br>
+                teiste<br>
+                poolt
+            </div>
         </div>
     </body>
 </html>
