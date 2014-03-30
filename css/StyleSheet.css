@@ -149,6 +149,19 @@ h3 {
     margin-top: 0;
 }
 
+.pasteTable {
+	border-collapse: collapse;
+	text-align: left;
+	
+}
+
+.pasteTable tr td{
+	padding: 5px 5px 0px 5px;
+}
+
 .pasteTable th {
+	border-spacing: 0px;
 	border-bottom: 1px solid;
+	padding: 0px 5px 0px 5px;
+	
 }
