@@ -19,11 +19,11 @@ $(document).ready(function () {
     $("#minu_amber").click(function () {
         $(".left-content").load("minu_amber.html");
     });
-    $("#profiil").click(function () {
+    $("#minu_profiil").click(function () {
         $(".left-content").load("minu_profiil.html");
     });
-    $("#seaded").click(function () {
-        $(".left-content").load("seaded.html");
+    $("#minu_seaded").click(function () {
+        $(".left-content").load("minu_seaded.html");
     });
     $("#searchBox").focusin(function () {
         if (this.value == 'Otsing...') {
