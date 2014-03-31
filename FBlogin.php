@@ -49,6 +49,9 @@
 			header('Location: index.php');
 			exit();
 		} else {
+			$query2 = "SELECT id FROM users2 WHERE username='$username'";
+			$result2 = pg_query($query2);
+			$userid = pg_fetch_row($result2)[0];
 			$_SESSION['user'] = $first_name;
 			$_SESSION['id'] = $userid;
 			pg_close($dbconn);
