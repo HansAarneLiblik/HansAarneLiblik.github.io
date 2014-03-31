@@ -11,11 +11,14 @@
 		$hashed_pw = (string)hash_final($ctx);
 		
 		$dbconn = pg_connect("host=vrl.liblik.ee port=5432 dbname=veebirak user=postgres password=lollakas");
+		$query_FB = "SELECT FBuser from users2 where username='$username'";
+		$result_FB = pg_query($query_FB);
+		
 		$query1 = "SELECT count(id) FROM users2 WHERE username='$username' AND password='$hashed_pw'";
 		$query2 = "SELECT id FROM users2 WHERE username='$username' AND password='$hashed_pw'";
 		$result1 = pg_query($query1);
 		
-		if (pg_fetch_row($result1)[0]==0){
+		if (pg_fetch_row($resultFB)[0]=="f" or pg_fetch_row($result1)[0]==0){
 			$arg = "Kasutajanimi või parool vale!";
 			$_SESSION['error'] =  $arg;
 			pg_close($dbconn);
@@ -31,6 +34,7 @@
 			exit();
 		}
 	}
+	
 	
 ?>
 <table>
@@ -53,7 +57,7 @@
 				</fieldset>
 			</form>
 		</td>
-		<td>
+		<td>			
 			<?php
 				if (isset($_SESSION['error'])) {
 					if ($_SESSION['error'] != "") {
@@ -62,6 +66,9 @@
 					}
 				}
 			?>
+			<div id="fblogin">
+				<a href="FBlogin.php"><img src="FBbutton.PNg"></a>
+			</div>
 		</td>
 	</tr>
 </table>
