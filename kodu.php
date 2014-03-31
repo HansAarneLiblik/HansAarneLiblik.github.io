@@ -27,7 +27,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Privatsus:</td>
+                <td>Privaatsus:</td>
                 <td>
                     <select id="privacy" name="privacy">
                         <option value="A">Avalik      </option>                        

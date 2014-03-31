@@ -2,23 +2,23 @@ $(document).ready(function () {
     if (document.location.hash == "" || document.location.hash == "#") {
         $(".left-content").load("kodu.php");
     } else {
-        $(".left-content").load(document.location.hash.substr(1) + ".html");
+		$(".left-content").load(document.location.hash.substr(1) + ".php");
+        /*$(".left-content").load(document.location.hash.substr(1) + ".html");
 		if (document.location.hash == "#login") {
 			$(".left-content").load(document.location.hash.substr(1) + ".php");
 		}
 		if (document.location.hash == "#register") {
-			$(".left-content").load(document.location.hash.substr(1) + ".php");
+			$(".left-content").load("register.php");
 		}
 		if (document.location.hash == "#minu_amber") {
-			$(".left-content").load(document.location.hash.substr(1) + ".php");
+			$(".left-content").load("minu_amber.php");
 		}
-		if (document.location.hash.substr(15, 29) == "#vaade.php?id=") {
-			var x = document.location.hash.substr(29, -1)
+		if (document.location.hash.substr(0, 15) == "#vaade.php?id=") {
 			$(".left-content").load(document.location.hash.substr(1));
-		}
+		}*/
     }
     $("#header").click(function () {
-        $(".left-content").load("kodu.html");
+        $(".left-content").load("kodu.php");
     });
     $("#loginLink").click(function () {
         $(".left-content").load("login.php");
@@ -30,10 +30,10 @@ $(document).ready(function () {
         $(".left-content").load("minu_amber.php");
     });
     $("#minu_profiil").click(function () {
-        $(".left-content").load("minu_profiil.html");
+        $(".left-content").load("minu_profiil.php");
     });
     $("#minu_seaded").click(function () {
-        $(".left-content").load("minu_seaded.html");
+        $(".left-content").load("minu_seaded.php");
     });
 	
     $("#searchBox").focusin(function () {

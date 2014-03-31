@@ -28,6 +28,7 @@
     $createdId = $row[0];
     pg_free_result($result);
     pg_close($dbconn);
+	
     
 ?>
 <!DOCTYPE html>
@@ -38,7 +39,7 @@
     </head>
     <body>
         <?php
-            header("Location: /vaade.php?id=$createdId");
+            header("Location: /#vaade.php?id=$createdId");
             exit;
         ?>
 

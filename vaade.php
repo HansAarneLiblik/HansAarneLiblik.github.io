@@ -16,7 +16,7 @@
         $row =  pg_fetch_row($result);  
         $codeName = $row[0];
         $content = $row[1];
-        $content2 = "<h1> $codeName </h1><p><textarea readonly id=\"codeBox\" name=\"koodiLahter\">$content</textarea></p>";
+        $content2 = "<h3> $codeName </h3><p><textarea readonly id=\"codeBox\" name=\"koodiLahter\">$content</textarea></p>";
         pg_free_result($result);
     } else {
         session_start();
@@ -31,7 +31,6 @@
                 $codeName = $row1[0];
                 $content = $row1[1];
                 $content2 = "<h1> $codeName </h1><p><textarea readonly id=\"codeBox\" name=\"koodiLahter\">$content</textarea></p>";
-				header('Location: #vaade.php');
             }
     
         } else {
@@ -41,10 +40,6 @@
     
     pg_close($dbconn);
 ?>
-<!DOCTYPE html>
-        asute algelisel vaate lehel<br>
-        <br>
-        <?php
-            echo $content2;
-            
-        ?>
+<?php
+	echo $content2;
+?>
