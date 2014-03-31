@@ -41,20 +41,17 @@
 	<tr>
 		<td>
 			<form id="login" action="login.php" method="post" accept-charset="UTF-8">
-				<fieldset>
-					<legend>Logi sisse</legend>
 					<table>
 						<tr>
-							<td><label for="username">Kasutajanimi</label></td>
+							<td><label for="username">Kasutajanimi </label></td>
 							<td><input class="vorm" type="text" name="username" id="username" maxlength="20" required /></td>
 						</tr>
 						<tr>
-							<td><label for="password">Parool</label></td>
+							<td><label for="password">Parool </label></td>
 							<td><input class="vorm" type="password" name="password" id="password" maxlength="50" required /></td>
 						</tr>
 					</table>
 					<input type="submit" name="Submit" value="Logi sisse" />
-				</fieldset>
 			</form>
 		</td>
 		<td>			

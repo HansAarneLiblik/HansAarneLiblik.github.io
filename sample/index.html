@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" ></script>
+</head>
+<body>
+<a href="#" id="signInButton">Sign in with Google</a>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#signInButton').click(function() {
+    $(this).attr('href','https://accounts.google.com/o/oauth2/auth?scope=' +
+      'https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fplus.login&' +
+      'redirect_uri=http://vrl.liblik.ee/sample/callback.php&'+
+      'response_type=code&' +
+      'client_id=168796522751-dlh7sdlf5g50k050669mlm4gqb4t3fm9.apps.googleusercontent.com&' +
+      'access_type=offline');
+      return true; // Continue with the new href.
+  });
+});
+</script>
+</body>
+</html>
