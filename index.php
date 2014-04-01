@@ -99,7 +99,7 @@
 						$result = pg_query($query);
 						$i = 1;
 						while($val = pg_fetch_row($result)){
-							echo "<tr><td>$i. </td><td><a href=\"#vaade.php?id=$val[0]\">$val[1]</a></td></tr>";
+							echo "<tr><td>$i. </td><td><a href=\"#vaade.php?id=$val[0]\" class=\"uuedKoodid\">$val[1]</a></td></tr>";
 							$i = $i + 1;
 						}
 						pg_close($dbconn);
