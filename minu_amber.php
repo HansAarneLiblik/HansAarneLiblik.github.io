@@ -24,7 +24,7 @@
 					} else {
 						$val[5] = "Avalik";
 					}
-					echo "<tr><td>$i. </td><td>$val[0]</td><td><a href=\"#vaade.php?id=$val[0]\">$val[1]</a></td>
+					echo "<tr><td>$i. </td><td>$val[0]</td><td><a href=\"#vaade.php?id=$val[0]\" class=\"uuedKoodid\">$val[1]</a></td>
 					<td>$val[4]</td><td>$val[5]</td></tr>";
 					$i = $i + 1;
 				}
