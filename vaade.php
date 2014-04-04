@@ -1,7 +1,5 @@
 <?php
 	if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
-		echo is_numeric($_GET['id']);
-		exit();
 		header('Location: kodu.php');
 	}
 	$code = split('[.]', $_GET['id']);
@@ -33,7 +31,7 @@
             } else {
                 $codeName = $row1[0];
                 $content = $row1[1];
-                $content2 = "<h1> $codeName </h1><p><textarea readonly id=\"codeBox\" name=\"koodiLahter\">$content</textarea></p>";
+                $content2 = "<h3> $codeName </h3><p><textarea readonly id=\"codeBox\" name=\"koodiLahter\">$content</textarea></p>";
             }
     
         } else {
@@ -44,6 +42,5 @@
     pg_close($dbconn);
 ?>
 <?php
-	echo "Code id is $codeId";
 	echo $content2;
 ?>
