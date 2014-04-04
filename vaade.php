@@ -1,9 +1,12 @@
 <?php
-	if(!isset($_GET['id']) or $_GET['id']==""){
-		header('Location: index.php');
+	if(!isset($_GET['id']) or !is_numeric($_GET['id'])){
+		echo is_numeric($_GET['id']);
+		exit();
+		header('Location: kodu.php');
 	}
 	$code = split('[.]', $_GET['id']);
-    $codeId = $code[0];
+    //$codeId = $code[0];
+	$codeId = $_GET['id'];
     $e_id = pg_escape_string($codeId);
     $dbconn = pg_connect("host=vrl.liblik.ee port=5432 dbname=veebirak user=postgres password=lollakas");
     $query1 = "select privacy from codes where id ='{$e_id}'";
@@ -41,5 +44,6 @@
     pg_close($dbconn);
 ?>
 <?php
+	echo "Code id is $codeId";
 	echo $content2;
 ?>
