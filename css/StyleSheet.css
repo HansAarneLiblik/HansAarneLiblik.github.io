@@ -164,3 +164,14 @@ h3 {
 	padding: 0px 5px 0px 5px;
 	
 }
+.authorName {
+	font: 12px auto;
+	color: #383838;
+	
+}
+
+.newCodesTable {
+	padding: 0px;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
